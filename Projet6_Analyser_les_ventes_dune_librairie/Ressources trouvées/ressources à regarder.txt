@@ -1,0 +1,9 @@
+Estimation paramétrique - estimateur 
+https://www.math.univ-toulouse.fr/~besse/Wikistat/pdf/st-m-inf-esti.pdf
+
+
+Degré de liberté -- voir df sur wiki : https://www.google.com/search?q=degr%C3%A9+de+libert%C3%A9+d%C3%A9finition&oq=degr%C3%A9+de+libert%C3%A9+d%C3%A9finition&aqs=chrome..69i57j0i512j0i22i30l4.2780j1j7&sourceid=chrome&ie=UTF-8
+
+
+SITE COMMENTPROGRESSER.COM excellent pour les stats !!
+https://commentprogresser.com/statistique-estimation-parametres-moyenne-mediane-etendue-ecart-type.html
