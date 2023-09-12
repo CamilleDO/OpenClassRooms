@@ -1,0 +1,53 @@
+
+CREATE TABLE Local (
+                id_local INT AUTO_INCREMENT NOT NULL,
+                type_local VARCHAR(30) NOT NULL,
+                PRIMARY KEY (id_local)
+);
+
+
+CREATE TABLE Commune (
+                id_commune INT AUTO_INCREMENT NOT NULL,
+                code_departement VARCHAR(5) NOT NULL,
+                commune VARCHAR(50) NOT NULL,
+                PRIMARY KEY (id_commune)
+);
+
+
+CREATE TABLE Bien (
+                id_bien INT AUTO_INCREMENT NOT NULL,
+                nb_piece_principale INT NOT NULL,
+                surface_carrez DECIMAL(10,2),
+                id_commune INT NOT NULL,
+                id_local INT NOT NULL,
+                PRIMARY KEY (id_bien)
+);
+
+
+CREATE TABLE Vente (
+                id_vente INT AUTO_INCREMENT NOT NULL,
+                date_mutation DATE NOT NULL,
+                nature_mutation VARCHAR(30) NOT NULL,
+                valeur_fonciere DECIMAL(10,2),
+                id_bien INT NOT NULL,
+                PRIMARY KEY (id_vente)
+);
+
+
+ALTER TABLE Bien ADD CONSTRAINT local_bien_fk
+FOREIGN KEY (id_local)
+REFERENCES Local (id_local)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION;
+
+ALTER TABLE Bien ADD CONSTRAINT commune_bien_fk
+FOREIGN KEY (id_commune)
+REFERENCES Commune (id_commune)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION;
+
+ALTER TABLE Vente ADD CONSTRAINT bien_vente_fk
+FOREIGN KEY (id_bien)
+REFERENCES Bien (id_bien)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION;
